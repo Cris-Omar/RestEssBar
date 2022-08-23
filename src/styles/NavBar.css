@@ -1,0 +1,30 @@
+.navbar {
+    width: 100%;
+    flex-direction: row;
+    display: inline-block;
+}
+
+.navbar .logo img{
+    flex: 50%;
+}
+
+.navbar .menu {
+    background-color: rgb(58, 21, 84);
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar .menu a:hover {
+    color: rgb(61, 235, 52);
+    cursor: pointer;
+}
