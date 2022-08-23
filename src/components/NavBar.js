@@ -13,11 +13,18 @@ export default function navBar() {
 
         <div className='menu'>
             <Link to="/">RestEssBar CH</Link>
-            <Link to="/">Standorte</Link>
-            <Link to="/">RestEssBar Gründen</Link>
-            <Link to="/">Spenden</Link>
-            <Link to="/">Foodwaste-Netzwerk</Link>
-            <Link to="contact">Kontakt</Link>
+
+            <div className='nav'>
+              <Link to="/standorte">Standorte</Link>
+              <div className='navContent'>
+                <Link to="/">Baden Restessbar</Link>
+                <Link to="/">Save our Food Davos </Link>
+              </div>
+            </div>
+            <Link to="/restessbar-gruenden">RestEssBar Gründen</Link>
+            <Link to="/spenden">Spenden</Link>
+            <Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link>
+            <Link to="/kontakt">Kontakt</Link>
         </div>
     </div>
   )

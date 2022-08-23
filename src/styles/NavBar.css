@@ -1,7 +1,6 @@
 .navbar {
     width: 100%;
     flex-direction: row;
-    display: inline-block;
 }
 
 .navbar .logo img{
@@ -10,18 +9,19 @@
 
 .navbar .menu {
     background-color: rgb(58, 21, 84);
-    max-width: 80%;
-    padding: 20px;
-    border-radius: 10px;
+    max-width: 70%;
+    border-radius: 15px;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .navbar .menu a {
     color: white;
     text-decoration: none;
     align-items: center;
-    justify-content: center;
-
 }
 
 .navbar .menu a:hover {
