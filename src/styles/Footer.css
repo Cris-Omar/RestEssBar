@@ -4,7 +4,8 @@
    text-align: center;
    background-color: rgb(58, 21, 84);
    color: white;
-   bottom: 0px;
+   position: absolute;
+   bottom: 0;
    flex-direction: column;
    padding-top: 10px;
 }
