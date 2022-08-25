@@ -5,16 +5,20 @@ import {Link} from "react-router-dom"
 
 
 export default function NavBar() {
-
-  //Open & close menu
-  const [click, setClick] = useState(false)
-  const handleClick = () => setClick(!click)
-  
-  const [open, setOpen] = useState(false)
-  const handleOpen = () => setOpen(!open)
+  //dropdown for REBCH
+  const [rebOpen, setRebOpen] = useState(false)
+  const handleRebOpen = () => setRebOpen(!rebOpen)
 
   const [locOpen, setLocOpen] = useState(false)
-  const handleLocOpen = () => setLocOpen(!locOpen)
+  const handleLocOpen = () =>  {setLocOpen(!locOpen)}
+  
+
+  //Mobile Open & close menuIcon
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+  //Mobile dropdown handle Open
+  const [mobOpen, setMobOpen] = useState(false)
+  const handleMobOpen = () => {setMobOpen(!mobOpen)}
 
   return (
   <div className='navbar'>
@@ -23,13 +27,13 @@ export default function NavBar() {
     </div>
     {/*big screen Navigation Menu starts here */}
     <div className='menu'>
-      <div className='menuItem' onMouseEnter={handleOpen} onMouseLeave={handleOpen}>
+      <div className='menuItem' onMouseEnter={handleRebOpen} onMouseLeave={handleRebOpen}>
         <Link to="/">RestEssBar CH <i class="fa-solid fa-angle-down"></i></Link>
-        {open && (
+        {rebOpen && (
           <div className='menuContent'>
-            <div className='childItem'><Link to="/">Über uns</Link></div>
-            <div className='childItem'><Link to="/">Medien</Link></div>
-            <div className='childItem'><Link to="/">Bildarchiv</Link></div>
+            <li><Link to="/">~ Über uns ~</Link></li>
+            <li><Link to="/">~ Medien ~</Link></li>
+            <li><Link to="/">~ Bildarchiv ~</Link></li>
           </div>
           )}
           </div>
@@ -37,32 +41,36 @@ export default function NavBar() {
               <Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link>
               {locOpen && (
                 <div className='menuContent'>
-                  <div className='childItem'><Link to="/">RestEssBar Baden</Link></div>
-                  <div className='childItem'><Link to="/">Save our food Davos</Link></div>
-                  <div className='childItem'><Link to="/">RestEssBarr Ebikon</Link></div>
-                  <div className='childItem'><Link to="/">RestEssBarr Frauenfeld</Link></div>
-                  <div className='childItem'><Link to="/">RestEssBarr Grenchen</Link></div>
+                  <li><Link to="/">~ RestEssBar Baden ~</Link></li>
+                  <li><Link to="/">~ Save our food Davos ~</Link></li>
+                  <li><Link to="/">~ RestEssBarr Ebikon ~</Link></li>
+                  <li><Link to="/">~ RestEssBarr Frauenfeld ~</Link></li>
+                  <li><Link to="/">~ RestEssBarr Grenchen ~</Link></li>
+
                 </div>
               )}
             </div>
-            
-            <div className="menuItem"><Link to="/restessbar-gruenden">RestEssBar Gründen</Link></div>
-            <div className='menuItem'><Link to="/spenden">Spenden</Link></div>
-            <div className='menuItem'><Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link></div>
-            <div className='menuItem'><Link to="/kontakt">Kontakt</Link></div>
-            {/*big screen Navigation Menu ends here */}
+          <div className="menuItem"><Link to="/restessbar-gruenden">RestEssBar Gründen</Link></div>
+          <div className='menuItem'><Link to="/spenden">Spenden</Link></div>
+          <div className='menuItem'><Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link></div>
+          <div className='menuItem'><Link to="/kontakt">Kontakt</Link></div>
+          {/*big screen Navigation Menu ends here */}
+
+        {/*small screen Navigation Menu starts here */}
+
+        <div className='menuIcon' onClick= {() => {handleClick(); handleMobOpen();}}>
+          <i class={click ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+          {mobOpen && (
+          <div className='subMenu'>
+            <li><Link to="/">RestEssBar CH <i class="fa-solid fa-angle-down"></i></Link></li>
+            <li><Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link></li>
+            <li><Link to="/restessbar-gruenden">RestEssBar Gründen</Link></li>
+            <li><Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link></li>
+            <li><Link to="/kontakt">Kontakt</Link></li>
+          </div>
+          )}
         </div>
-                    {/*small screen Navigation Menu starts here */}
-                    <div className='menuIcon' onClick={handleClick}>
-              <i class={click ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
-            </div>
-            <div className='subMenu'>
-              <ul><Link to="/">RestEssBar CH <i class="fa-solid fa-angle-down"></i></Link></ul>
-              <ul><Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link></ul>
-              <ul><Link to="/restessbar-gruenden">RestEssBar Gründen</Link></ul>
-              <ul><Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link></ul>
-              <ul><Link to="/kontakt">Kontakt</Link></ul>
-            </div>
+      </div>
   </div>
   )
 }
