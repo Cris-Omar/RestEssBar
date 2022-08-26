@@ -1,5 +1,6 @@
 import React from 'react'
 import twint from "../assets/Twint.png"
+import "../styles/style.css"
 
 export default function Donate() {
   return (

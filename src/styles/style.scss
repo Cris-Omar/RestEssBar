@@ -1,0 +1,66 @@
+//my variables
+$primaryBackgColor : #6C2B3B;
+$colorOnHover : green;
+
+//my functions
+@mixin standardSiteCustom{
+    text-align: center;
+    margin: auto;
+    min-height: 50em;
+    max-width: 850px;
+}
+
+//exportet files
+@import "./header";
+
+.home {
+    @include standardSiteCustom();
+
+    .greenTitle {
+        background-color: #567946;
+        font-size: 35px;
+        color: white;
+        padding: 20px;
+        border-radius: 40px;
+    }
+    
+    h1 {
+        color: #567946;
+    }
+}
+
+.locations {
+    @include standardSiteCustom();
+}
+
+.found {
+    @include standardSiteCustom();
+}
+
+.donate {
+    @include standardSiteCustom();
+    
+    .twintImage {
+        padding: 50px;
+     }
+}
+
+.foodNetwork {
+    @include standardSiteCustom();
+}
+
+.contact {
+    @include standardSiteCustom();
+}
+
+
+.footer {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: $primaryBackgColor;
+    color: white;
+    position: relative;
+    flex-direction: column;
+    padding-top: 10px;
+ }

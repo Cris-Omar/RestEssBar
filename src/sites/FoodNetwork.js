@@ -1,9 +1,9 @@
 import React from 'react'
-import "../styles/FoodNetwork.css"
+import "../styles/style.css"
 
 export default function FoodNetwork() {
   return (
-    <div>
+    <div className='foodNetwork'>
         <h1>Foodwaste Netzwerk</h1>
     </div>
   )

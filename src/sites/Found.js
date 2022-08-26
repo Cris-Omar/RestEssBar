@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Found.css"
+import "../styles/style.css"
 
 export default function Found() {
   return (

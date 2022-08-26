@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import "../styles/NavBar.css"
+import "../styles/style.css"
 import logo from "../assets/LogoTransp.png"
 import {Link} from "react-router-dom"
-
 
 export default function NavBar() {
   //dropdown for REBCH
@@ -19,6 +18,9 @@ export default function NavBar() {
   //Mobile dropdown handle Open
   const [mobOpen, setMobOpen] = useState(false)
   const handleMobOpen = () => {setMobOpen(!mobOpen)}
+  //Mobile Location dropdown
+  const [locMobOpen, setMobLocOpen] = useState(false)
+  const handleMobLocOpen = () =>  {setLocOpen(!locMobOpen)}
 
   return (
   <div className='navbar'>
@@ -36,20 +38,19 @@ export default function NavBar() {
             <li><Link to="/">~ Bildarchiv ~</Link></li>
           </div>
           )}
+      </div>
+      <div className='menuItem' onMouseEnter={handleLocOpen} onMouseLeave={handleLocOpen}>
+        <Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link>
+        {locOpen && (
+          <div className='menuContent'>
+            <li><Link to="/">~ RestEssBar Baden ~</Link></li>
+            <li><Link to="/">~ Save our food Davos ~</Link></li>
+            <li><Link to="/">~ RestEssBarr Ebikon ~</Link></li>
+            <li><Link to="/">~ RestEssBarr Frauenfeld ~</Link></li>
+            <li><Link to="/">~ RestEssBarr Grenchen ~</Link></li>
           </div>
-            <div className='menuItem' onMouseEnter={handleLocOpen} onMouseLeave={handleLocOpen}>
-              <Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link>
-              {locOpen && (
-                <div className='menuContent'>
-                  <li><Link to="/">~ RestEssBar Baden ~</Link></li>
-                  <li><Link to="/">~ Save our food Davos ~</Link></li>
-                  <li><Link to="/">~ RestEssBarr Ebikon ~</Link></li>
-                  <li><Link to="/">~ RestEssBarr Frauenfeld ~</Link></li>
-                  <li><Link to="/">~ RestEssBarr Grenchen ~</Link></li>
-
-                </div>
-              )}
-            </div>
+        )}
+      </div>
           <div className="menuItem"><Link to="/restessbar-gruenden">RestEssBar Gründen</Link></div>
           <div className='menuItem'><Link to="/spenden">Spenden</Link></div>
           <div className='menuItem'><Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link></div>
@@ -63,7 +64,20 @@ export default function NavBar() {
           {mobOpen && (
           <div className='subMenu'>
             <li><Link to="/">RestEssBar CH <i class="fa-solid fa-angle-down"></i></Link></li>
-            <li><Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link></li>
+
+            <div className='mobMenuItem' onMouseEnter={handleMobLocOpen} onMouseLeave={handleMobLocOpen}>
+              <Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link>
+              {locOpen && (
+                <div className='mobMenuContent'>
+                  <li><Link to="/">~ RestEssBar Baden ~</Link></li>
+                  <li><Link to="/">~ Save our food Davos ~</Link></li>
+                  <li><Link to="/">~ RestEssBarr Ebikon ~</Link></li>
+                  <li><Link to="/">~ RestEssBarr Frauenfeld ~</Link></li>
+                  <li><Link to="/">~ RestEssBarr Grenchen ~</Link></li>
+                </div>
+              )}
+            </div>
+
             <li><Link to="/restessbar-gruenden">RestEssBar Gründen</Link></li>
             <li><Link to="/foodwaste-netzwerk">Foodwaste-Netzwerk</Link></li>
             <li><Link to="/kontakt">Kontakt</Link></li>

@@ -1,0 +1,122 @@
+
+.navbar {
+    width: 100%;
+
+
+    .logo img{
+        flex: 50%;
+        padding-bottom: 10px;
+    }
+
+    .menu {
+        background-color: $primaryBackgColor;
+        max-width: 960px;
+        border-radius: max(0px, min(15px, calc((100vw - 4px - 100%) * 9999)));
+        margin-top: 10px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        flex-wrap: wrap;
+
+        a {
+            color: white;
+            text-decoration: none;
+            align-items: center;
+        }
+        .menuItem {
+            list-style-type: none;
+            background-color: $primaryBackgColor;
+            font-size: 17px;
+            padding: 15px;
+            border-radius: 25%;
+            position: relative;
+            transition: 0.6s;
+
+            &:hover {
+                filter: brightness(1.2);
+                cursor: pointer;
+                transition-timing-function: ease;
+                transition-duration: 0.6s;
+                font-size: 18px;
+            }
+
+            a:hover {
+                color: $colorOnHover;
+            }
+
+            li {
+                background-color: $primaryBackgColor;
+                font-size: 15px;
+                padding: 12px;
+                border-radius: 25%;
+                position: relative;
+                transition: 0.6s;
+                
+                &:hover {
+                    font-size: 16px;
+                    transition-duration: 0.6s;
+                    filter: brightness(0.8);
+                    cursor: pointer;
+                    color: $colorOnHover;
+                }
+            }
+
+        }
+
+        .menuContent {
+            background-color: $primaryBackgColor;
+            position: absolute;
+            padding: 12px;
+            border-radius: 4px 4px 15px 15px;
+            margin-top: 16px;
+            width: max-content;
+        }
+
+    }
+}
+        
+/* display none for Mobile only*/
+.menuIcon {
+    display: none;
+}
+
+
+@media screen and (max-width: 478px) {
+    /*bigscreen hide menu items*/
+    .navbar {
+        padding-bottom: 30px;
+        .menuItem {
+            display: none;
+        }
+
+        .menuContent {
+            display: none;
+        }
+
+        /*small screen config*/
+        .menuIcon {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: #6C2B3B;
+            font-size: 40px;
+            position: absolute;
+
+            .subMenu {
+                list-style-type: none;
+                flex-direction: column;
+                position: relative;
+                background-color: #6C2B3B;
+                font-size: 16px;             
+    
+                li {
+                    padding: 15px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+
+}
