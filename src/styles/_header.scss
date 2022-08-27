@@ -9,7 +9,8 @@
     }
 
     .menu {
-        background-color: $primaryBackgColor;
+        background: linear-gradient($primColorBottom, $primColorTop);
+        background-color:linear-gradient ;
         max-width: 960px;
         border-radius: max(0px, min(15px, calc((100vw - 4px - 100%) * 9999)));
         margin-top: 10px;

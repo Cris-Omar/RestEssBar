@@ -1,6 +1,8 @@
 //my variables
-$primaryBackgColor : #6C2B3B;
-$colorOnHover : green;
+$primColorTop:#4E2F4D;
+$primColorBottom: #4e492f;
+$primaryBackgColor : #4E2F4B;
+$colorOnHover : #35845D;
 
 //my functions
 @mixin standardSiteCustom{
@@ -8,24 +10,65 @@ $colorOnHover : green;
     margin: auto;
     min-height: 50em;
     max-width: 850px;
+    h1 {
+        color: $colorOnHover;
+    }
 }
 
 //exportet files
 @import "./header";
 
 .home {
-    @include standardSiteCustom();
 
+    @include standardSiteCustom();
+    
     .greenTitle {
-        background-color: #567946;
+        background-color: $colorOnHover;
         font-size: 35px;
         color: white;
         padding: 20px;
         border-radius: 40px;
+        max-width: 600px;
+        margin: auto;
+        
+        a{
+            text-decoration: none;
+            color: $primaryBackgColor;
+            &:hover {
+                filter: brightness(1.2);
+            }
+        }
+    }
+
+    h2 {
+        color: $colorOnHover;
+    }
+
+    .manifest {
+        box-sizing: border-box;
+        text-align: left;
+        max-width: 400px;
+        margin: auto;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin-left: 100px;
+            li {
+                padding: 5px;
+
+            }
+        }
     }
     
-    h1 {
-        color: #567946;
+    a{
+        font-weight: bold;
+        text-decoration: none;
+        color: $colorOnHover;
+        &:hover {
+            filter: brightness(1.2);
+        }
     }
 }
 
@@ -53,6 +96,17 @@ $colorOnHover : green;
     @include standardSiteCustom();
 }
 
+//subpages
+
+.about {
+    @include standardSiteCustom();
+}
+.media {
+    @include standardSiteCustom();
+}
+.picturesArchiv {
+    @include standardSiteCustom();
+}
 
 .footer {
     width: 100%;

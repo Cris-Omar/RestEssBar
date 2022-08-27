@@ -33,9 +33,9 @@ export default function NavBar() {
         <Link to="/">RestEssBar CH <i class="fa-solid fa-angle-down"></i></Link>
         {rebOpen && (
           <div className='menuContent'>
-            <li><Link to="/">~ Über uns ~</Link></li>
-            <li><Link to="/">~ Medien ~</Link></li>
-            <li><Link to="/">~ Bildarchiv ~</Link></li>
+            <li><Link to="/ueberUns">~ Über uns ~</Link></li>
+            <li><Link to="/medien">~ Medien ~</Link></li>
+            <li><Link to="/bildarchiv">~ Bildarchiv ~</Link></li>
           </div>
           )}
       </div>

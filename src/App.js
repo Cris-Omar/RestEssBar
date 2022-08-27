@@ -8,16 +8,28 @@ import FoodNetwork from "./sites/FoodNetwork"
 import Donate from "./sites/Donate"
 import Found from "./sites/Found"
 import Locations from "./sites/Locations"
+//subpages REB-CH
+import PicturesArchiv from './sites/subPages/PicturesArchiv';
+import About from './sites/subPages/About';
+import Media from './sites/subPages/Media';
+//subpages locations
+
 
 function App() {
   return (
     <div className="App">
       <Router>
         <NavBar />
-
         <Routes>
           <Route exact path='/' element={<Home/>}></Route>
+            {/*Subpages*/}
+            <Route exact path="/ueberUns" element={<About/>}></Route>
+            <Route exact path="/medien" element={<Media/>}></Route>
+            <Route exact path="/bildArchiv" element={<PicturesArchiv/>}></Route>
+
           <Route exact path="/standorte" element={<Locations/>}></Route>
+            {/*Subpages*/}
+            
           <Route exact path="/restessbar-gruenden" element={<Found/>}></Route>
           <Route exact path="/spenden" element={<Donate/>}></Route>
           <Route exact path="/foodwaste-netzwerk" element={<FoodNetwork/>}></Route>

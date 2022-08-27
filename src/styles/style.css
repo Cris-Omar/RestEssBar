@@ -6,7 +6,8 @@
   padding-bottom: 10px;
 }
 .navbar .menu {
-  background-color: #6C2B3B;
+  background: linear-gradient(#4e492f, #4E2F4D);
+  background-color: linear-gradient;
   max-width: 960px;
   border-radius: max(0px, min(15px, (100vw - 4px - 100%) * 9999));
   margin-top: 10px;
@@ -24,7 +25,7 @@
 }
 .navbar .menu .menuItem {
   list-style-type: none;
-  background-color: #6C2B3B;
+  background-color: #4E2F4B;
   font-size: 17px;
   padding: 15px;
   border-radius: 25%;
@@ -39,10 +40,10 @@
   font-size: 18px;
 }
 .navbar .menu .menuItem a:hover {
-  color: green;
+  color: #35845D;
 }
 .navbar .menu .menuItem li {
-  background-color: #6C2B3B;
+  background-color: #4E2F4B;
   font-size: 15px;
   padding: 12px;
   border-radius: 25%;
@@ -54,10 +55,10 @@
   transition-duration: 0.6s;
   filter: brightness(0.8);
   cursor: pointer;
-  color: green;
+  color: #35845D;
 }
 .navbar .menu .menuContent {
-  background-color: #6C2B3B;
+  background-color: #4E2F4B;
   position: absolute;
   padding: 12px;
   border-radius: 4px 4px 15px 15px;
@@ -110,15 +111,50 @@
   min-height: 50em;
   max-width: 850px;
 }
+.home h1 {
+  color: #35845D;
+}
 .home .greenTitle {
-  background-color: #567946;
+  background-color: #35845D;
   font-size: 35px;
   color: white;
   padding: 20px;
   border-radius: 40px;
+  max-width: 600px;
+  margin: auto;
 }
-.home h1 {
-  color: #567946;
+.home .greenTitle a {
+  text-decoration: none;
+  color: #4E2F4B;
+}
+.home .greenTitle a:hover {
+  filter: brightness(1.2);
+}
+.home h2 {
+  color: #35845D;
+}
+.home .manifest {
+  box-sizing: border-box;
+  text-align: left;
+  max-width: 400px;
+  margin: auto;
+}
+.home .manifest ul {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-left: 100px;
+}
+.home .manifest ul li {
+  padding: 5px;
+}
+.home a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #35845D;
+}
+.home a:hover {
+  filter: brightness(1.2);
 }
 
 .locations {
@@ -127,6 +163,9 @@
   min-height: 50em;
   max-width: 850px;
 }
+.locations h1 {
+  color: #35845D;
+}
 
 .found {
   text-align: center;
@@ -134,12 +173,18 @@
   min-height: 50em;
   max-width: 850px;
 }
+.found h1 {
+  color: #35845D;
+}
 
 .donate {
   text-align: center;
   margin: auto;
   min-height: 50em;
   max-width: 850px;
+}
+.donate h1 {
+  color: #35845D;
 }
 .donate .twintImage {
   padding: 50px;
@@ -151,6 +196,9 @@
   min-height: 50em;
   max-width: 850px;
 }
+.foodNetwork h1 {
+  color: #35845D;
+}
 
 .contact {
   text-align: center;
@@ -158,12 +206,45 @@
   min-height: 50em;
   max-width: 850px;
 }
+.contact h1 {
+  color: #35845D;
+}
+
+.about {
+  text-align: center;
+  margin: auto;
+  min-height: 50em;
+  max-width: 850px;
+}
+.about h1 {
+  color: #35845D;
+}
+
+.media {
+  text-align: center;
+  margin: auto;
+  min-height: 50em;
+  max-width: 850px;
+}
+.media h1 {
+  color: #35845D;
+}
+
+.picturesArchiv {
+  text-align: center;
+  margin: auto;
+  min-height: 50em;
+  max-width: 850px;
+}
+.picturesArchiv h1 {
+  color: #35845D;
+}
 
 .footer {
   width: 100%;
   height: 200px;
   text-align: center;
-  background-color: #6C2B3B;
+  background-color: #4E2F4B;
   color: white;
   position: relative;
   flex-direction: column;
