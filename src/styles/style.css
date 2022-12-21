@@ -6,8 +6,7 @@
   padding-bottom: 10px;
 }
 .navbar .menu {
-  background: linear-gradient(#4e492f, #4E2F4D);
-  background-color: linear-gradient;
+  background: #4E2F4B;
   max-width: 960px;
   border-radius: max(0px, min(15px, (100vw - 4px - 100%) * 9999));
   margin-top: 10px;
@@ -32,17 +31,26 @@
   position: relative;
   transition: 0.6s;
 }
+.navbar .menu .menuItem svg {
+  fill: white;
+  width: 12px;
+}
 .navbar .menu .menuItem:hover {
-  filter: brightness(1.2);
   cursor: pointer;
+  filter: brightness(1.2);
+}
+.navbar .menu .menuItem:hover a {
   transition-timing-function: ease;
   transition-duration: 0.6s;
   font-size: 18px;
-}
-.navbar .menu .menuItem a:hover {
   color: #35845D;
 }
-.navbar .menu .menuItem li {
+.navbar .menu .menuItem:hover svg {
+  fill: #35845D;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+.navbar .menu .menuItem .menuContent li {
   background-color: #4E2F4B;
   font-size: 15px;
   padding: 12px;
@@ -50,19 +58,21 @@
   position: relative;
   transition: 0.6s;
 }
-.navbar .menu .menuItem li:hover {
-  font-size: 16px;
-  transition-duration: 0.6s;
+.navbar .menu .menuItem .menuContent li:hover {
   filter: brightness(0.8);
   cursor: pointer;
-  color: #35845D;
+}
+.navbar .menu .menuItem .menuContent li:hover a {
+  font-size: 16px;
+  transition-duration: 0.6s;
+  color: white;
 }
 .navbar .menu .menuContent {
   background-color: #4E2F4B;
   position: absolute;
   padding: 12px;
   border-radius: 4px 4px 15px 15px;
-  margin-top: 16px;
+  margin-top: 15.5px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -89,7 +99,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    color: #6C2B3B;
+    color: #4E2F4B;
     font-size: 40px;
     position: absolute;
   }
@@ -109,7 +119,8 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .home h1 {
   color: #35845D;
@@ -161,7 +172,8 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .locations h1 {
   color: #35845D;
@@ -171,9 +183,29 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .found h1 {
+  color: #35845D;
+}
+.found .rebGruenden {
+  max-width: 600px;
+  margin: auto;
+  border-style: solid;
+  border-color: #4E2F4B;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.found a {
+  text-decoration: none;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #4E2F4B;
+  color: white;
+  padding: 5px;
+}
+.found a:hover {
   color: #35845D;
 }
 
@@ -181,22 +213,57 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .donate h1 {
   color: #35845D;
 }
-.donate .twintImage {
-  padding: 50px;
+.donate .donateInfo {
+  background-color: #c7c7c7;
+  border-radius: 15px;
+  max-width: 580px;
+  margin: auto;
+  font-size: 18px;
+  padding: 20px;
+}
+.donate .twintImage img {
+  width: 465;
+  height: 500px;
+  border-radius: 25px;
 }
 
 .foodNetwork {
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .foodNetwork h1 {
+  color: #35845D;
+}
+.foodNetwork .objects {
+  max-width: 650px;
+  margin: auto;
+}
+.foodNetwork .objects .object {
+  border-style: solid;
+  border-radius: 15px;
+  border-color: firebrick;
+  border-width: 1px;
+  margin: 10px;
+}
+.foodNetwork .objects .object p {
+  font-size: 18px;
+}
+.foodNetwork .objects .object a {
+  text-decoration: none;
+  color: #4E2F4B;
+  font-weight: bold;
+  font-size: 20px;
+}
+.foodNetwork .objects .object a:hover {
   color: #35845D;
 }
 
@@ -204,7 +271,8 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .contact h1 {
   color: #35845D;
@@ -214,17 +282,33 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .about h1 {
   color: #35845D;
+}
+.about .members {
+  display: flex;
+  justify-content: space-around;
+}
+.about .members ul {
+  font-size: 21px;
+  font-weight: bold;
+  padding-top: 25px;
+}
+.about .members ul li {
+  font-size: 16px;
+  font-weight: normal;
+  list-style: none;
 }
 
 .media {
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .media h1 {
   color: #35845D;
@@ -234,19 +318,159 @@
   text-align: center;
   margin: auto;
   min-height: 50em;
-  max-width: 850px;
+  max-width: 800px;
+  line-height: 1.7;
 }
 .picturesArchiv h1 {
   color: #35845D;
 }
 
+.contactForm {
+  background-color: #73a88e;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 50px;
+}
+.contactForm form {
+  padding: 15px;
+  margin: auto;
+}
+.contactForm form .object {
+  margin: 15px;
+}
+.contactForm form .object label {
+  color: white;
+  margin: 10px;
+  display: block;
+}
+.contactForm form .object input, .contactForm form .object textarea {
+  min-width: 80%;
+  outline: none;
+  resize: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #35845D;
+  caret-color: #4E2F4B;
+  line-height: normal;
+  margin: auto;
+}
+.contactForm form .object input:focus, .contactForm form .object textarea:focus {
+  border-bottom: 1px solid black;
+  filter: brightness(1.2);
+}
+.contactForm form .fileUploadIcon {
+  max-width: 200px;
+  margin: auto;
+}
+.contactForm form .fileUploadIcon label {
+  color: white;
+  display: block;
+}
+.contactForm form .fileUploadIcon svg {
+  fill: white;
+  width: 80px;
+  margin-top: 15px;
+  margin: 10px 0px 15px 0px;
+}
+.contactForm form .fileUploadIcon svg:hover {
+  fill: #4E2F4B;
+  cursor: pointer;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+.contactForm form button {
+  width: 30%;
+  max-width: 200px;
+  background-color: #4E2F4B;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.locIcons {
+  text-align: center;
+  margin: auto;
+  min-height: 50em;
+  max-width: 800px;
+  line-height: 1.7;
+  max-width: 620px;
+}
+.locIcons h1 {
+  color: #35845D;
+}
+.locIcons .locIconsWrapper {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  flex-flow: row wrap;
+}
+.locIcons .locIconsWrapper .icons {
+  margin: auto;
+  width: 200px;
+}
+.locIcons .locIconsWrapper .icons:hover {
+  transform: scale(1.02);
+}
+.locIcons .locIconsWrapper .icons img {
+  width: 200px;
+}
+
+.picGallery {
+  max-width: 620px;
+  margin: auto;
+}
+.picGallery .picGalleryWrapper {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  flex-flow: row wrap;
+}
+.picGallery .picGalleryWrapper img {
+  width: 200px;
+}
+.picGallery .picGalleryWrapper img:hover {
+  transform: scale(1.02);
+}
+
 .footer {
   width: 100%;
   height: 200px;
-  text-align: center;
   background-color: #4E2F4B;
   color: white;
+  position: absolute;
+  margin-top: 30px;
+}
+.footer .socialMedia {
   position: relative;
-  flex-direction: column;
-  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.footer .socialMedia li {
+  list-style: none;
+  margin: 7px;
+  border-radius: 50%;
+}
+.footer .socialMedia li:hover {
+  background-color: #4E2F4B;
+  filter: brightness(0.9);
+  cursor: pointer;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+.footer .socialMedia li svg {
+  fill: white;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 10px;
+}
+.footer .socialMedia li svg:hover {
+  fill: #35845D;
+  cursor: pointer;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+.footer p {
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */

@@ -9,11 +9,10 @@ import Donate from "./sites/Donate"
 import Found from "./sites/Found"
 import Locations from "./sites/Locations"
 //subpages REB-CH
-import PicturesArchiv from './sites/subPages/PicturesArchiv';
+import PicturesArchive from './sites/subPages/PicturesArchive';
 import About from './sites/subPages/About';
 import Media from './sites/subPages/Media';
 //subpages locations
-
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
             {/*Subpages*/}
             <Route exact path="/ueberUns" element={<About/>}></Route>
             <Route exact path="/medien" element={<Media/>}></Route>
-            <Route exact path="/bildArchiv" element={<PicturesArchiv/>}></Route>
+            <Route exact path="/bildArchiv" element={<PicturesArchive/>}></Route>
 
           <Route exact path="/standorte" element={<Locations/>}></Route>
             {/*Subpages*/}

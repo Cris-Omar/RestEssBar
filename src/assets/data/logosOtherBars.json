@@ -1,0 +1,58 @@
+[
+    {
+        "path" : "assets/logoOthersBars/Baden.png",
+        "text" : "Baden"
+    },
+    {
+        "path" : "assets/logoOthersBars/Davos.webp",
+        "text" : "Davos"
+    },
+    {
+        "path" : "assets/logoOthersBars/Ebikon.webp",
+        "text" : "Ebikon"
+    },
+    {
+        "path" : "assets/logoOthersBars/Frauenfeld.png",
+        "text" : "Frauenfeld"
+    },
+    {
+        "path" : "assets/logoOthersBars/Grenchen.png",
+        "text" : "Grenchen"
+    },
+    {
+        "path" : "assets/logoOthersBars/Igis.webp",
+        "text" : "Igis"
+    },
+    {
+        "path" : "assets/logoOthersBars/Kreuzlingen.webp",
+        "text" : "Kreuzlingen"
+    },
+    {
+        "path" : "assets/logoOthersBars/Langenthal.png",
+        "text" : "Langenthal"
+    },
+    {
+        "path" : "assets/logoOthersBars/Luzern.webp",
+        "text" : "Luzern"
+    },
+    {
+        "path" : "assets/logoOthersBars/Sarnen.webp",
+        "text" : "Sarnen"
+    },
+    {
+        "path" : "assets/logoOthersBars/Schaffhausen.webp",
+        "text" : "Schaffhausen"
+    },
+    {
+        "path" : "assets/logoOthersBars/Solothurn.webp",
+        "text" : "Solothurn"
+    },
+    {
+        "path" : "assets/logoOthersBars/Sursee.webp",
+        "text" : "Sursee"
+    },
+    {
+        "path" : "assets/logoOthersBars/Zofingen.webp",
+        "text" : "Zofingen"
+    }
+]

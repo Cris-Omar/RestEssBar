@@ -3,6 +3,9 @@ import "../styles/style.css"
 import logo from "../assets/LogoTransp.png"
 import {Link} from "react-router-dom"
 
+//Icon import
+import AngleDownIcon from "../assets/icons/AngleDownIcon"
+
 export default function NavBar() {
   //dropdown for REBCH
   const [rebOpen, setRebOpen] = useState(false)
@@ -30,17 +33,17 @@ export default function NavBar() {
     {/*big screen Navigation Menu starts here */}
     <div className='menu'>
       <div className='menuItem' onMouseEnter={handleRebOpen} onMouseLeave={handleRebOpen}>
-        <Link to="/">RestEssBar CH <i class="fa-solid fa-angle-down"></i></Link>
+        <Link to="/">RestEssBar CH <AngleDownIcon /></Link>
         {rebOpen && (
           <div className='menuContent'>
-            <li><Link to="/ueberUns">~ Über uns ~</Link></li>
+            <li><Link to="/ueberUns" className='menuContentItem'>~ Über uns ~</Link></li>
             <li><Link to="/medien">~ Medien ~</Link></li>
             <li><Link to="/bildarchiv">~ Bildarchiv ~</Link></li>
           </div>
           )}
       </div>
       <div className='menuItem' onMouseEnter={handleLocOpen} onMouseLeave={handleLocOpen}>
-        <Link to="/standorte" >Standorte <i class="fa-solid fa-angle-down"></i></Link>
+        <Link to="/standorte" >Standorte <AngleDownIcon /></Link>
         {locOpen && (
           <div className='menuContent'>
             <li><Link to="/">~ RestEssBar Baden ~</Link></li>

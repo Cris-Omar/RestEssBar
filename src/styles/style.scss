@@ -9,7 +9,10 @@ $colorOnHover : #35845D;
     text-align: center;
     margin: auto;
     min-height: 50em;
-    max-width: 850px;
+    max-width: 800px;
+    line-height: 1.7;
+
+
     h1 {
         color: $colorOnHover;
     }
@@ -74,22 +77,88 @@ $colorOnHover : #35845D;
 
 .locations {
     @include standardSiteCustom();
+    
 }
 
 .found {
     @include standardSiteCustom();
+
+    .rebGruenden {
+        max-width: 600px;
+        margin: auto;
+        border-style: solid;
+        border-color: $primaryBackgColor;
+        border-width: 1px;
+        border-radius: 10px;
+    }
+    a{
+        text-decoration: none;
+        border-style: solid;
+        border-radius: 5px;
+        background-color: $primaryBackgColor;
+        color: white;
+        padding: 5px;
+
+        &:hover{
+            color: $colorOnHover;
+        }
+    }
 }
 
 .donate {
     @include standardSiteCustom();
+
+    .donateInfo {
+        background-color: #c7c7c7;
+        border-radius: 15px;
+        max-width: 580px;
+        margin: auto;
+        font-size: 18px;
+        padding: 20px;
+
+    }
     
     .twintImage {
-        padding: 50px;
+
+        img {
+            width: 465;
+            height: 500px;
+            border-radius: 25px;
+        }
+
      }
 }
 
 .foodNetwork {
     @include standardSiteCustom();
+
+
+    .objects {
+        max-width: 650px;
+        margin: auto;
+        .object{
+            border-style: solid;
+            border-radius: 15px;
+            border-color: firebrick;
+            border-width: 1px;
+            margin: 10px;
+
+            p {
+                font-size: 18px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $primaryBackgColor;
+                font-weight: bold;
+                font-size: 20px;
+                &:hover {
+                    color: $colorOnHover;
+                }
+            }
+
+        }
+    }
 }
 
 .contact {
@@ -100,21 +169,203 @@ $colorOnHover : #35845D;
 
 .about {
     @include standardSiteCustom();
+
+    .members {
+        display: flex;
+        justify-content: space-around;
+
+        ul {
+            font-size: 21px;
+            font-weight: bold;
+            padding-top: 25px;
+
+            li {
+                font-size: 16px;
+                font-weight: normal;
+                list-style: none;
+
+            }
+        }
+    }
 }
+
 .media {
     @include standardSiteCustom();
+    
 }
+
 .picturesArchiv {
     @include standardSiteCustom();
+
+}
+
+//Components
+
+.contactForm {
+    background-color: #73a88e;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 50px;
+
+    form {
+        padding: 15px;
+        margin: auto;
+
+        .object {
+            margin: 15px;
+
+
+            label {
+                color:white;
+                margin: 10px;
+                display: block;
+            }
+
+            input, textarea {
+                min-width: 80%;
+                outline: none;
+                resize: none;
+                border: none;
+                border-radius: 10px;
+                background-color: #35845D;
+                caret-color: $primaryBackgColor;
+                line-height: normal;
+                margin: auto;
+
+                &:focus {
+                    border-bottom: 1px solid black;
+                    filter: brightness(1.2);
+                }
+            }
+        }
+        .fileUploadIcon{
+            max-width: 200px;
+            margin: auto;
+            
+            label {
+                color: white;
+                display: block;
+            }
+
+            svg {
+                fill: white;
+                width: 80px;
+                margin-top: 15px;
+                margin: 10px 0px 15px 0px;
+
+                &:hover {
+                    fill: $primaryBackgColor;
+                    cursor: pointer;
+                    transition-timing-function: ease;
+                    transition-duration: 0.6s;
+                }
+            }
+        }
+
+        button {
+            width: 30%;
+            max-width: 200px;
+            background-color: $primaryBackgColor;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 17px;
+        }
+    }
+}
+
+.locIcons {
+    @include standardSiteCustom();
+    max-width: 620px;
+
+  
+    .locIconsWrapper {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        flex-flow: row wrap;
+
+        .icons {
+            margin: auto;
+            width: 200px;
+            &:hover{
+                transform: scale(1.02);
+            }
+            img{
+                width: 200px;
+            }
+            
+        }
+
+    }
+}
+
+.picGallery {
+    max-width: 620px;
+    margin: auto;
+    
+    .picGalleryWrapper {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        flex-flow: row wrap;
+
+        img {
+            width: 200px;
+            
+            &:hover{
+            transform: scale(1.02);
+        }
+        }
+    }
 }
 
 .footer {
     width: 100%;
     height: 200px;
-    text-align: center;
     background-color: $primaryBackgColor;
     color: white;
-    position: relative;
-    flex-direction: column;
-    padding-top: 10px;
+    position:absolute;
+    margin-top: 30px;
+
+
+    .socialMedia {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        li{
+            list-style: none;
+            margin: 7px;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $primaryBackgColor;
+                filter: brightness(0.9);
+                cursor: pointer;
+                transition-timing-function: ease;
+                transition-duration: 0.6s;
+            }
+
+            svg {
+                fill: white;
+                width: 50px;
+                height: 50px;
+                padding: 8px;
+                border-radius: 10px;
+
+                &:hover {
+                    fill: $colorOnHover;
+                    cursor: pointer;
+                    transition-timing-function: ease;
+                    transition-duration: 0.6s;
+                }
+ 
+            }
+        }
+        }
+
+    p {
+        font-size: 17px;
+    }
  }
